@@ -1,2 +1,2 @@
 LOAD CSV FROM 'https://raw.githubusercontent.com/msenechal/text-embeddings/main/persons.csv' AS line
-MERGE (:Person {firstName: line[1], lastName: line[2], email: line[3]})
+MERGE (:Person {firstName: coalesce(line[1],"N/A"), lastName: coalesce(line[2],"N/A"), email: coalesce(line[3],"N/A")})

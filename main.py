@@ -1,10 +1,10 @@
-import os
+from decouple import config
 from sentence_transformers import SentenceTransformer
 from neo4j import GraphDatabase
 
-uri = os.environ['NEO4j_URI']
-username = os.environ['USERNAME']
-password = os.environ['PASSWORD']
+uri = config('NEO4J_URI')
+username = config('USERNAME')
+password = config('PASSWORD')
 
 driver = GraphDatabase.driver(uri, auth=(username, password))
 

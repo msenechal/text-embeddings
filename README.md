@@ -19,7 +19,7 @@ cypher-shell -a $NEO4J_URI -u $NEO4J_USERNAME -p $NEO4J_PASSWORD -f load-persons
 
 # run embeddings
 ```shell
-pip install -U neo4j
+pip install -U neo4j sentence_transformers python-decouple
 python main.py
 ```
 
