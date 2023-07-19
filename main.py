@@ -9,7 +9,7 @@ password = config('NEO4J_PASSWORD')
 driver = GraphDatabase.driver(uri, auth=(username, password))
 
 
-query = "MATCH (p:Person) WHERE NOT EXISTS(p.embedding) RETURN p.email AS email, p.firstName as firstName, p.lastName as lastName"
+query = "MATCH (p:Person) WHERE p.embedding IS NULL RETURN p.email AS email, p.firstName as firstName, p.lastName as lastName"
 with driver.session() as session:
     result = session.run(query)
     personNode = []
