@@ -14,7 +14,7 @@ source .env
 
 # load emails into AuraDS
 ```shell
-cypher-shell -a $NEO4j_URI -u $USERNAME -p $PASSWORD -f load-persons.cypher
+cypher-shell -a $NEO4J_URI -u $NEO4J_USERNAME -p $NEO4J_PASSWORD -f load-persons.cypher
 ```
 
 # run embeddings
