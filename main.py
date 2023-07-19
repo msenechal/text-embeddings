@@ -3,8 +3,8 @@ from sentence_transformers import SentenceTransformer
 from neo4j import GraphDatabase
 
 uri = config('NEO4J_URI')
-username = config('USERNAME')
-password = config('PASSWORD')
+username = config('NEO4J_USERNAME')
+password = config('NEO4J_PASSWORD')
 
 driver = GraphDatabase.driver(uri, auth=(username, password))
 
