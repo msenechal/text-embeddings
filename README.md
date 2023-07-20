@@ -18,10 +18,7 @@ cypher-shell -a $NEO4J_URI -u $NEO4J_USERNAME -p $NEO4J_PASSWORD -f load-persons
 ```
 
 # run embeddings
-```shell
-pip install -U neo4j sentence_transformers python-decouple
-python main.py
-```
+Import the notebook `generate-embeddings.ipynb` into colab, or jupyter + run it
 
-# todo
-Move to colab or panda using dataframes
+# run knn
+Import the notebook `knn.ipynb` into colab, or jupyter + run it
